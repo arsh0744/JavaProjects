@@ -114,6 +114,10 @@ public class Locker {
 			System.out.println("Enter Number of Lines in File :");
 			int lineCount = newFile.nextInt();
 			
+			
+				
+		
+			
 			for(count = 0 ; count<= lineCount ;count++) {
 				System.out.println("Enter File Data");
 				writer.write( newFile.nextLine() + "\n");
