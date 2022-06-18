@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Travel Details</title>
+</head>
+<body>
+<h1>Select Travel Details :</h1>
+
+
+<form action = "http://localhost:8080/FlyAway/FlightList" method= "post">
+
+<label for="source">From:</label>
+
+<select name="source" id="source">
+<option value=""></option>
+  <option value="Delhi">Delhi</option>
+  <option value="Bangalore">Bangalore</option>
+  <option value="Chennai">Chennai</option>
+  <option value="Jammu">Jammu</option>
+  <option value="Goa">Goa</option>
+</select><br/>
+
+<label for="to">Destination:</label>
+
+<select name="to" id="to">
+<option value=""></option>
+  <option value="Delhi">Delhi</option>
+  <option value="Bangalore">Bangalore</option>
+  <option value="Chennai">Chennai</option>
+  <option value="Jammu">Jammu</option>
+  <option value="Goa">Goa</option>
+</select><br/>
+
+Date of Travel : <input type="date" name = "date"><br/>
+No. of Passengers : <input type="number" name = "passCount"><br/>
+<input type = "submit" value = "Search for Flights">
+
+</form>
+
+</body>
+</html>
