@@ -1,0 +1,88 @@
+<body>
+
+
+
+    <!-- Vertical Navbar Section ---------------------------------------------------------------------------------->
+
+
+
+    <div style="width: 18% ; float:left ; ">
+        
+
+<div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical" >
+    <a class="{{bak_list_items.class}} " id="{{bak_list_items.link_id}}" data-toggle="pill"  role="tab" aria-controls="v-pills-home" aria-selected="true"  
+    style="cursor: pointer;" *ngFor="let bak_list_items of bak_page_cat" (click)="dispProducts(bak_list_items)">
+    
+    {{bak_list_items.sec_id}}
+  
+  </a>
+    
+  </div>
+  <div class="tab-content" id="v-pills-tabContent">
+    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
+    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+  </div>
+
+    </div>
+
+<!-- Vertical Navbar Section --------------------------------------------------------------------------->
+
+
+
+
+
+<!--Cards Display Area -------------------------------------------------------------------------------->
+
+    <div id="cardsArea" style="width: 82% ;float:right ;">
+        <div class="row">
+
+            <div class="col-md-3" *ngFor="let explore_cards of bak_activeSeg">
+
+                <div class="card" style="border:solid;" id="{{explore_cards.card_id}}" >
+                    <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                    <img src="{{explore_cards.img}}" class="img-fluid" alt="Fissure in Sandstone" />
+                    </div>
+                    <div class="card text-center">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">{{explore_cards.title}}</h5>
+
+                            <div class="container" id="qtyBut">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+
+
+                                    <span class="btn btn-primary" id="{{explore_cards.minus_id}}"
+                                        (click)="dec_counter(explore_cards)" style="display:none ;">
+                                        - </span>
+                                    <span class="btn btn-success" id="{{explore_cards.add_btn_id}}"
+                                        (click)="inc_fun(explore_cards) ">ADD TO CART</span>
+                                    <span class="btn btn-primary" id="{{explore_cards.disp_id}}"
+                                        style="display:none ;pointer-events: none;">
+                                        {{explore_cards.prod_qty}}</span>
+                                    <span class="btn btn-primary" id="{{explore_cards.plus_id}}"
+                                        (click)="inc_fun(explore_cards) " style="display:none ;">
+                                        +</span>
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card-footer text-muted">Rs. {{explore_cards.prod_price}}/Kg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+</body>

@@ -1,0 +1,74 @@
+<!-- Background image -->
+
+<div id="veg-img" class="p-5 text-center bg-image" style="
+  background-image: url('/assets/images/veg.jpg');
+  height: 800px; margin-left: 5px;margin-right: 5px;
+  
+">
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h1 class="mb-3">Welcome to Kitchen Story</h1>
+        <h4 class="mb-3">Get Fresh Groceries at Your Doorstep !</h4>
+        <a class="btn btn-outline-light btn-lg" href="#explore" role="button">Explore</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Background image -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Explore Section -->
+
+
+
+<!-- Row 1 -->
+<div class="row" id="explore">
+
+  <!-- Card 1 -->
+
+  <div class="col-md-4" *ngFor="let explore_cards of products_explore">
+
+    <div class="card" style="border:solid; ;" id="{{explore_cards.card_id}}">
+      <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+      <img src="{{explore_cards.img}}" class="img-fluid" alt="Fissure in Sandstone" />
+    </div>
+      <div class="card text-center">
+        <div class="card-header">{{explore_cards.header}}</div>
+        <div class="card-body">
+
+          <h5 class="card-title">{{explore_cards.title}}</h5>
+          <p class="card-text">{{explore_cards. card_text}}</p>
+
+          <div class="container" id="qtyBut">
+            <div class="btn-group" role="group" aria-label="Basic example">
+
+
+              <span class="btn btn-primary" id="{{explore_cards.minus_id}}" (click)="dec_counter(explore_cards)" style="display:none ;">
+                 - </span>
+              <span class="btn btn-success" id="{{explore_cards.add_btn_id}}" (click)="add_fun(explore_cards) ">ADD TO CART</span>
+              <span class="btn btn-primary" id="{{explore_cards.disp_id}}" style="display:none ;pointer-events: none;"> 
+                {{explore_cards.prod_qty}}</span>
+              <span class="btn btn-primary" id="{{explore_cards.plus_id}}" (click)="inc_fun(explore_cards) " style="display:none ;"> 
+                +</span>
+
+
+
+            </div>
+          </div>
+
+        </div>
+        <div class="card-footer text-muted">Rs. {{explore_cards.prod_price}}/Kg</div>
+      </div>
+    </div>
+  </div>

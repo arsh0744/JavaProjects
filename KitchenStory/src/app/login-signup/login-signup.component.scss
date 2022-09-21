@@ -1,0 +1,51 @@
+#login{
+    padding-left: 100px;
+}
+.ng-touched .ng-invalid{
+    border: 1px solid red;
+    border-style: none none solid none;
+    border-radius: 0px;
+}
+
+.form-group{
+    transition: all .3s;
+}
+.form-label{
+    
+    
+    transform-origin: 0 0;
+    transition: all .3s;
+}
+
+.form-control{
+    box-shadow: none;
+    border-style: none none solid none;
+    transition: all .3s;
+}
+
+
+.form-control::placeholder{
+    color: transparent;
+}
+
+.form-control:focus {
+
+box-shadow: none;
+outline: none;
+border-color: orange;
+
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label
+
+
+{
+    transform: translateY(-1em) scale(0.6);
+}
+
+.form-group:focus-within{
+    transform: scale(1.5 1.5);
+
+}
+

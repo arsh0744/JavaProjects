@@ -1,0 +1,88 @@
+<body>
+
+
+
+    <!-- Vertical Navbar Section ---------------------------------------------------------------------------------->
+
+
+
+    <div style="width: 18% ; float:left ; ">
+        
+
+<div class="nav flex-column nav-pills" id="" role="tablist" aria-orientation="vertical" >
+    <a class="{{list_items.class}} " id="{{list_items.link_id}}" data-toggle="pill"  role="tab" aria-controls="v-pills-home" aria-selected="true"  
+    style="cursor: pointer;" *ngFor="let list_items of t_page_cat" (click)="dispProducts(list_items)">
+    
+    {{list_items.sec_id}}
+  
+  </a>
+    
+  </div>
+  <div class="tab-content" id="v-pills-tabContent">
+    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
+    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+  </div>
+
+    </div>
+
+<!-- Vertical Navbar Section --------------------------------------------------------------------------->
+
+
+
+
+
+<!--Cards Display Area -------------------------------------------------------------------------------->
+
+    <div id="cardsArea" style="width: 82% ;float:right ;">
+        <div class="row">
+
+            <div class="col-md-3" *ngFor="let tea_cards of t_activeSeg">
+
+                <div class="card" style="border:solid;" id="{{tea_cards.card_id}}" >
+                    <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                    <img src="{{tea_cards.img}}" class="img-fluid" alt="Fissure in Sandstone" />
+                    </div>
+                    <div class="card text-center">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">{{tea_cards.title}}</h5>
+
+                            <div class="container" id="qtyBut">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+
+
+                                    <span class="btn btn-primary" id="{{tea_cards.minus_id}}"
+                                        (click)="dec_counter(tea_cards)" style="display:none ;">
+                                        - </span>
+                                    <span class="btn btn-success" id="{{tea_cards.add_btn_id}}"
+                                        (click)="inc_fun(tea_cards) ">ADD TO CART</span>
+                                    <span class="btn btn-primary" id="{{tea_cards.disp_id}}"
+                                        style="display:none ;pointer-events: none;">
+                                        {{tea_cards.prod_qty}}</span>
+                                    <span class="btn btn-primary" id="{{tea_cards.plus_id}}"
+                                        (click)="inc_fun(tea_cards) " style="display:none ;">
+                                        +</span>
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card-footer text-muted">Rs. {{tea_cards.prod_price}}/Kg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+</body>
