@@ -1,0 +1,16 @@
+<div class="card-group" style="width:100% ;">
+    <div class="card" *ngFor="let special_item of allSpecialItems" style="width: 120%;"  >
+      <img src=" {{special_item.itemImgSrc}}" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+      <div class="card-body">
+        <h5 class="card-title">{{special_item.itemId}}</h5>
+        <p class="card-text">
+          {{special_item.itemDesc}}
+        </p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-danger"  (click)="delSpecialItem(special_item)">Delete Item</button>
+      </div>
+    </div>
+   
+   
+  </div>

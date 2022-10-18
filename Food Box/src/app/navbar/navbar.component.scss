@@ -1,0 +1,86 @@
+.loadst{
+
+
+    transition-duration: 1s;
+    transform:scale(0);
+
+}
+.loadst.active{
+    transition-duration: 1s;
+    transform: scale(1);
+}
+
+li,a{
+    transition-duration: 1s;
+transform: scale(1);
+
+}
+li:hover{
+    transition-duration: 1s;
+transform: scale(1.4);
+
+}
+
+
+#cartIcon{
+
+    transition-duration: 1s;
+    transform: scale(1);
+   
+}
+#cartIcon:hover{
+    transition-duration: 1s;
+    transform: scale(1.2);
+
+}
+
+#cartIcon.added{
+    transition-duration: 1s;
+    transform: scale(1.5) translateX(-30px)translateY(10px);
+    
+}
+
+#loginBtn{
+    transition-duration: 1s;
+    transform: scale(1);
+
+}
+
+#loginBtn:hover{
+    transition-duration: 1s;
+    transform: scale(1.1);
+
+}
+
+#logo{
+
+    transition-duration: 1s;
+    transform: scale(1);
+}
+
+#logo:hover{
+
+    transition-duration: 1s;
+    transform: scale(1.1);
+}
+.fas.fa-bell{
+
+    transition-duration: 1s;
+    transform: scale(1);
+}
+.fas.fa-bell:hover{
+
+    transition-duration: 1s;
+    transform: scale(1.5);
+}
+
+#contact{
+    transition-duration: 1s;
+    transform: scale(1);
+
+}
+#contact:hover{
+    transition-duration: 1s;
+    transform: scale(1.1);
+
+}

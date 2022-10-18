@@ -1,0 +1,148 @@
+
+.form-control::placeholder{
+    color: transparent;
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label
+
+
+{
+    transform: translateY(-1.2em) scale(0.7);
+}
+
+
+
+
+
+
+#navbar_area{
+position: absolute;
+display: flex;
+width: 20%;
+
+left: 10px;
+height: 100%;
+box-shadow: aqua;
+
+justify-items: center;
+justify-content: center;
+
+align-content: center;
+
+
+
+
+}
+
+
+#display_area{
+position: absolute;
+    display: grid;
+    width:80%;
+
+    left: 20%;
+    height: 100%;
+}
+#navbar_display{
+
+position: inherit;
+right: 10px;
+justify-content: flex-end;
+align-items: flex-end;
+justify-items: flex-end;
+width: inherit;
+display: flex;
+float: right;
+height: max-content;
+width: 98%;
+
+}
+
+.navbarcontent{
+    
+    width: max-content;
+}
+
+
+#admin_display{
+
+    margin-top: 10px;
+    width: 100%;
+    height: 10%;
+    font-weight: bold;
+    
+    
+}
+
+.content_display{
+    display: block;
+    
+    margin-top: 6%;
+    align-content: center;
+align-items: center;
+justify-content: space-around;
+justify-items: center;
+
+    
+}
+
+.content_display .content{
+
+margin-left: 30px;
+
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-items: center;
+}
+
+
+#v-tabs-tabContent{
+
+margin-top: 500px;
+align-content: center;
+align-items: center;
+justify-content: center;
+justify-items: center;
+color: black;
+
+}
+
+.nav {
+    position: absolute;
+    padding-right: 400px;
+    margin-right: 300px;
+    left: 60px;
+    
+}
+
+
+.nav    .nav-link{
+
+    border-radius: 50px ;
+    width:200px ;
+    display: flex;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+margin-right: 3000px;
+
+
+
+
+}
+#adminDis{
+    width: max-content;
+    color: black;
+}
+
+
+
+
+
+
+

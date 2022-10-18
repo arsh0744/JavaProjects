@@ -1,0 +1,89 @@
+
+<form  [formGroup]="itemByCateg_form"  (ngSubmit)="findItemsByCateg(itemByCateg_form.get('itembycategory').value)">
+    <div class="text-center mb-3">
+      <p>Items by Category:</p>
+
+
+    </div>
+    <div class ="col-4" id="sortlist" >
+
+
+        <mat-select   id="sort" placeholder="Sort By :" style="color:white ;">
+
+          <mat-option   id="lowToHigh" value="Price: Low to High" role="button"  (click)="lowToHighSort()" >
+
+            Price: Low to High</mat-option>
+
+          <mat-option value="Price: High to Low" role="button" id="highToLow" (click)="highToLowSort()">
+            Price: High to Low</mat-option>
+
+        </mat-select>
+
+        <!-- <mat-label>Favorite food</mat-label>
+  <mat-select>
+    <mat-option value="food.value">
+      food.viewValue
+    </mat-option>
+  </mat-select> -->
+
+
+
+
+
+  </div>
+
+    <!-- Category input -->
+    <div class="form-outline mb-4">
+
+      <mat-form-field appearance="fill">
+        <mat-label class="form-label" for="category" >Category</mat-label>
+        <mat-select   id="category"  formControlName="itembycategory" class="form-control">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let ibyc_cat_list of ibyc_categs" value="{{ibyc_cat_list.categName}}">{{ibyc_cat_list.categName}}</mat-option>
+        </mat-select>
+
+
+      </mat-form-field>
+
+
+      <div class ="alert alert-danger" id="noitems"  style="display: none;">
+
+        <p>No Items Found For The Category</p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-3 btn-rounded"
+     style="width: 60%;margin-left: 20%;">
+
+      Find Items</button>
+  </form>
+
+
+  <br><br>
+
+  <div style="display: flow-root;" class="box row-cols-3">
+
+  <div class="card "   *ngFor="let items of itemCardsByCateg">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body">
+      <p class="card-header">{{items.pId}}</p>
+      <h5 class="card-title">{{items.item_Name}}</h5>
+      <p class="card-text">{{items.itemCategory}}</p>
+      <p class="card-text">{{items.item_Desc}}</p>
+      <p class="card-text">{{items.item_Img_Src}}</p>
+      <p class="card-footer">{{items.item_Price}}</p>
+      <a  class="btn btn-primary">Update Item</a>
+      <a href="items" class="btn btn-danger" style="margin: left 20px;"   (click)="delItem(items)">Delete Item</a>
+    </div>
+  </div>
+</div>

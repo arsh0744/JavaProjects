@@ -1,0 +1,105 @@
+<header>
+    <!-- Intro settings -->
+    <style>
+      /* Default height for small devices */
+      #intro-example {
+        height: 400px;
+      }
+  
+      /* Height for devices larger than 992px */
+      @media (min-width: 992px) {
+        #intro-example {
+          height: 600px;
+        }
+      }
+    </style>
+  
+  
+  
+    <!-- Background image -->
+    <div
+      id="intro-example"
+      class="p-5 text-center bg-image"
+      style="background-image: url('/assets/images/indian-condiments-with-copy-space-view.jpg');"
+    >
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+         <div class="text-white">
+            <h1 class="mb-3">Welcome to Food Box </h1>
+            <h5 class="mb-4">Cuisines from Around the World !</h5>
+            <a
+              class="btn btn-outline-light btn-lg m-2"
+              href="#specials"
+              role="button"
+              id="exploreBtn"
+              target="_self"   >
+            Find Out What's Special Today !
+          </a>
+           
+          </div>
+        </div> 
+      </div>
+    </div>
+    <!-- Background image -->
+  </header>
+  <body>
+
+
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="specials" >
+      <div class="card text-center" *ngFor="let special_item of special_items"
+       style="height:700px ;  background: rgb(193, 190, 190);"  >
+        <img src="{{special_item.itemImgSrc}}" class="card-img-top" 
+        
+        style="height: 300px ;"
+        
+        alt="Hollywood Sign on The Hill"/>
+        <div class="discount">Flat {{special_item.discount }} % OFF</div>
+        <div class="card-body">
+          <h5 class="card-title"><strong>Today's Special</strong></h5>
+          <p class="card-text">
+          {{special_item.itemName}}
+          </p>
+          <p class="card-text">{{special_item.itemDesc}}</p>
+
+
+          <p class="card-text alert-success">Discounted Price : 
+            {{  (special_item.itemPrice)*((100-special_item.discount))/100  }}</p>
+
+          <p class="text-muted"><s>Normal Price : Rs -  {{special_item.itemPrice}} </s></p>
+        </div>
+        
+        <div class="card-footer" style="justify-items: center;align-items: center;justify-content:center ;">
+          
+          <div  class="cartBtns" style="justify-content: center;width: 100%;align-content: center;">
+          <a  class="btn btn-success btn-rounded usable" id="addCart"
+           
+          
+         (click)="hideNext($event)"
+          
+          (click)="addToCart(special_item)" >Add to Cart</a>
+
+       
+          <a  class="btn btn-danger btn-rounded" id="removeCart" 
+           
+          (click)="removeFromCart(special_item)" id="removeCart" (click)="hidePrev($event)" >Remove from Cart</a>
+          
+        </div>
+         
+
+        </div>
+      </div>
+     
+     
+    </div>
+
+
+
+
+
+
+
+    
+
+  </body>
+
+ 

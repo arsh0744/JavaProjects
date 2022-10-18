@@ -1,0 +1,123 @@
+
+<!-- 
+  Cards List
+ -->
+<div class="container" style="max-width: 100%;height: 100%;margin-top:2% ;margin-left:1% ;margin-right: 1%;">
+<div class="row w-100">
+    <div class="col-2">
+      <!-- Tab navs -->
+      <div
+        class="nav flex-column nav-tabs text-center"
+        id="v-tabs-tab"
+        role="tablist"
+        aria-orientation="vertical"
+      >
+        <a
+          class="nav-link active"
+          id="v-tabs-all-tab"
+          data-mdb-toggle="tab"
+          href="#v-tabs-all"
+          role="tab"
+          aria-controls="v-tabs-all"
+          aria-selected="true"
+          >All Menu Items</a
+        >
+        <a
+          class="nav-link"
+          id="v-tabs-nonveg-tab"
+          data-mdb-toggle="tab"
+          href="#v-tabs-nonveg"
+          role="tab"
+          aria-controls="v-tabs-nonveg"
+          aria-selected="false"
+          >Non-Veg</a
+        >
+        <a
+          class="nav-link"
+          id="v-tabs-pizza-tab"
+          data-mdb-toggle="tab"
+          href="#v-tabs-pizza"
+          role="tab"
+          aria-controls="v-tabs-pizza"
+          aria-selected="false"
+          >Pizza</a
+        >
+              <a
+              class="nav-link"
+              id="v-tabs-beverage-tab"
+              data-mdb-toggle="tab"
+              href="#v-tabs-beverage"
+              role="tab"
+              aria-controls="v-tabs-beverage"
+              aria-selected="false"
+              >Beverages</a
+            >
+            <a
+            class="nav-link"
+            id="v-tabs-more-tab"
+            data-mdb-toggle="tab"
+            href="#v-tabs-more"
+            role="tab"
+            aria-controls="v-tabs-more"
+            aria-selected="false"
+            >More</a
+          >
+      </div>
+      <!-- Tab navs -->
+    </div>
+  
+    <div class="col-9">
+      <!-- Tab content -->
+      <div class="tab-content" id="v-tabs-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="v-tabs-all"
+          role="tabpanel"
+          aria-labelledby="v-tabs-all-tab"
+        >
+        <app-all-items></app-all-items>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="v-tabs-nonveg"
+          role="tabpanel"
+          aria-labelledby="v-tabs-nonveg-tab"
+        >
+          <app-non-veg></app-non-veg>
+
+        </div>
+        <div
+          class="tab-pane fade"
+          id="v-tabs-pizza"
+          role="tabpanel"
+          aria-labelledby="v-tabs-pizza-tab"
+        >
+          <app-pizza></app-pizza>
+        </div>
+        <div
+        class="tab-pane fade"
+        id="v-tabs-beverage"
+        role="tabpanel"
+        aria-labelledby="v-tabs-beverage-tab"
+      >
+          <app-beverages> </app-beverages>
+      </div>
+      <div
+      class="tab-pane fade"
+      id="v-tabs-more"
+      role="tabpanel"
+      aria-labelledby="v-tabs-more-tab" 
+      
+      style="position: absolute;bottom:50% ; font-family: Georgia, 'Times New Roman', Times, serif;"
+    >
+    <div class="watermark" style="pointer-events: none;font-size: 50px;color: rgb(162, 160, 160);">
+      More Items Coming Soon !!
+     </div>
+
+    </div>
+      </div>
+      <!-- Tab content -->
+    </div>
+  </div>
+
+</div>

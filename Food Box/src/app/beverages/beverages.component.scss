@@ -1,0 +1,71 @@
+#sortlist{
+
+
+    margin-left: 80%;
+    margin-top: 1%;
+    
+    width: 200px;
+    
+    
+    }
+
+    mat-option.mat-selected{
+    
+        border:green 1px solid;
+       
+     }
+
+
+     .card{
+        
+        transition-duration: 1s;
+        transform: scale(1);
+        border-radius:15px ;
+
+    
+    }
+
+    
+.card:hover{
+    transition-duration: 1s ;
+    transform: scale(1.03);
+}
+.card-img-top{
+
+    border-radius:15px ;
+}
+
+
+
+.btn.btn-success.btn-rounded.usable{
+
+    
+    transition-duration: 1s;
+    display: block;
+    
+
+
+}
+.btn.btn-success.btn-rounded{
+
+display: none;
+    transition-duration: 1s;
+
+
+}
+
+
+.btn.btn-danger.btn-rounded{
+    
+    display: none;
+}
+
+.btn.btn-danger.btn-rounded.usable{
+    transition-duration: 10s;
+    display: block;
+    
+} 
+
+    
+
+

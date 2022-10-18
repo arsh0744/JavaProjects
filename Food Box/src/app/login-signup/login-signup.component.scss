@@ -1,0 +1,398 @@
+.form-control::placeholder{
+    color: transparent;
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label
+
+
+{
+    transform: translateY(-1.2em) scale(0.7);
+}
+
+.loadstyle{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 50%;
+    margin-right: 25%;
+    opacity: 0;
+    transition: 0.5s;
+}
+.loadstyle.active{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.form-control{
+
+    border: solid red 1px;
+}
+
+
+.poadstyle{
+    align-self: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+    opacity: 0;
+
+}
+.poadstyle.active{
+    transition: 0.5s;
+    opacity: 1;
+}
+
+
+//---------------username error message and loadstyle--------------------------------------------------------------
+
+
+.username_loadstyle{
+    position: absolute;
+
+bottom: 10%;
+right: 2%;
+
+transform: scale(0);
+transition-delay: 0.5s;
+
+
+}
+
+.username_loadstyle.active{
+    transition: .75s;
+    transform: scale(1);
+
+
+}
+
+//*****************************************************************************************************************
+
+.usernameRes{
+
+    background: black;
+    min-width: fit-content;
+    min-height: fit-content;
+    display: flex;
+    justify-content: center;
+    transform: scale(0);
+    transition: 2s;
+    align-self: center;
+    
+
+}
+
+.usernameRes.active{
+    transition: 2s;
+    transform: scale(1);
+
+}
+.usernameRes   .error_username{
+
+
+    position: absolute;
+
+width: 0px;
+height: 0px;
+background: brown;
+bottom: 0%;
+right: -50%;
+border-radius: 40px;
+align-items: center;
+justify-content: center;
+display: flex;
+transform: scale(0);
+
+transition: 1.5s;
+
+}
+
+
+.usernameRes.active  .error_username{
+    width: 300px;
+    height: 40px;
+    transform: scale(1);
+    transform: translateX(-25px);
+    transition: 1.5s;
+
+
+
+}
+
+
+.usernameRes   .error_username  .error_content{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+
+    width: 400px;
+    padding: 10px;
+  transition : 0.5s;
+   scale: 0;
+
+
+}
+.usernameRes.active  .error_username .error_content{
+    transform: translateX(-25px);
+    scale: 1;
+transition: 1.5s;
+color: aliceblue;
+
+
+}
+#username:valid{
+    border: solid yellow 1px;
+}
+
+
+// ------------------------------------------------------- username error message and loadstyle----------------------------------
+
+
+#admincheckres{
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content:center ;
+    transform: scale(0);
+    transition-duration: 1s;
+}
+#admincheckres.active{
+    transform: scale(1);
+    transition-duration: 1s;
+}
+
+
+#usercheckres{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content:center ;
+    transform: scale(0);
+    transition-duration: 1s;
+
+
+}
+#usercheckres.active{
+    transform: scale(1);
+    transition-duration: 1s;
+}
+
+
+#reg_pass_res {
+   
+
+    position: absolute;
+    left: 81%;
+    top: 70%;    
+    width: 250px;
+    height: 30px;
+   
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content:center ;
+    text-align: center;
+    text-justify: distribute;
+   
+    
+ 
+
+   
+    transform: scale(0);
+    transition-duration: 2s;
+
+
+}
+
+#reg_pass_res.active {
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content:center ;
+    
+
+    left: 71%;
+    transition-duration: 3s;
+
+
+    top: 67%;
+    transition-duration: 3s;
+
+    transform: scale(1);
+    transition-duration: 2s;
+}
+p {
+    padding-top: 10px;
+}
+
+
+#reg_username_res{
+
+    
+
+    position: absolute;
+    left: 130%;
+    top:-55%;    
+    width: 250px;
+    height: 30px;
+    
+    
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content:center ;
+    text-align: center;
+    text-justify: distribute;   
+    transform: scale(0);
+    transition-duration: 2s;
+
+
+
+
+
+
+}
+
+#reg_username_res.active{
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content:center ;
+    
+
+    left: 101%;
+    transition-duration: 3s;
+
+
+    top: 15%;
+    transition-duration: 3s;
+
+    transform: scale(1);
+    transition-duration: 2s;
+
+
+}
+
+
+#reg_email_res{
+
+   
+    position: absolute;
+    left: 130%;
+    top:200%;    
+    width: 250px;
+    height: 30px;
+    
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content:center ;
+    text-align: center;
+    text-justify: distribute;   
+    transform: scale(0);
+    transition-duration: 2s;
+
+
+
+
+}
+
+#reg_email_res.active{
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content:center ;
+    
+
+    left: 101%;
+    transition-duration: 3s;
+
+
+    top: 8%;
+    transition-duration: 3s;
+
+    transform: scale(1);
+    transition-duration: 2s;
+
+}
+#reg_res{
+
+    
+    
+    position: absolute;
+    
+   
+    width: 350px;
+    height: 40px;
+    
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content:center ;
+    text-align: center;
+    text-justify: distribute;   
+    transform: scale(0);
+    transition-duration: 2s;
+
+right: 2%;
+bottom: -10%;
+
+
+
+}
+#reg_res.active{
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content:center ;
+    
+
+    
+
+
+    bottom: 10%;
+    transition-duration: 3s;
+
+    transform: scale(1);
+    transition-duration: 2s;
+
+
+}
+
+
+.loadstyle_admin{
+
+transform: scale(0);
+transition-duration: 1s;
+}
+.loadstyle_admin.show{
+
+    transform: scale(1);
+    transition-duration: 1s;
+    }
+
+
+
+
+
+
+
+
+

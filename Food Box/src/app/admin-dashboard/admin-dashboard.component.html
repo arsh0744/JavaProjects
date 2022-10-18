@@ -1,0 +1,206 @@
+<div class="container" id="navbar_area">
+
+  <div class="col" style="justify-items: center; width: 100%;margin-left: 5%;border-radius: 25px;background: grey;">
+
+    <div class="row w-150" id="admin_display" style="justify-items: center; border-radius: 25px;">
+      <div class="content" style="margin: 5%;margin-top: 10%;margin-left: 20%;" id="adminDis">
+        <a >
+          <img
+            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+            class="rounded-circle"
+            height="25"
+            alt="Black and White Portrait of a Man"
+            loading="lazy"
+            
+          />
+        </a>
+        
+
+
+        Welcome Admin Arsh
+
+      </div>
+
+
+    </div>
+
+    <div class="row w-200"
+      style="display:flex ;justify-content: flex-end;margin-top:50px ;width: 100px;margin-left: 20%;">
+
+      <div class="col" style="width: 100%;margin-left: 50px;">
+
+        <!-- Tab navs -->
+        <div class="nav flex-column nav-tabs text-center" id="v-tabs-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="v-tabs-home-tab" data-mdb-toggle="tab" href="#v-tabs-home" role="tab"
+            aria-controls="v-tabs-home" aria-selected="true">Home</a>
+          <a class="nav-link" id="v-tabs-profile-tab" data-mdb-toggle="tab" href="#v-tabs-items" role="tab"
+            aria-controls="v-tabs-profile" aria-selected="false">All FoodBox Items</a>
+          <a class="nav-link" id="v-tabs-profile-tab" data-mdb-toggle="tab" href="#v-tabs-additem" role="tab"
+            aria-controls="v-tabs-profile" aria-selected="false">Add FoodBox Item</a>
+          <a class="nav-link" id="v-tabs-messages-tab" data-mdb-toggle="tab" href="#v-tabs-updateitem" role="tab"
+            aria-controls="v-tabs-messages" aria-selected="false">Update  Item</a>
+          <a class="nav-link" id="v-tabs-messages-tab" data-mdb-toggle="tab" href="#v-tabs-itemsbycategory" role="tab"
+            aria-controls="v-tabs-messages" aria-selected="false">Items by Category</a>
+          <a class="nav-link" id="v-tabs-messages-tab" data-mdb-toggle="tab" href="#v-tabs-addcategory" role="tab"
+            aria-controls="v-tabs-messages" aria-selected="false">Add Item Category</a>
+            <a class="nav-link" id="v-tabs-messages-tab" data-mdb-toggle="tab" href="#v-tabs-specials" role="tab"
+            aria-controls="v-tabs-messages" aria-selected="false" >Food Box Specials</a>
+        </div>
+        <!-- Tab navs -->
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<div class="container" id="display_area">
+
+  <div class="navbar" id="navbar_display">
+
+    <div class="navbarcontent">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <ul class="navbar-nav d-flex flex-row">
+            <!-- Icons -->
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-bell"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0" role="button">
+              <a class="nav-link" href="#" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+                Log Out
+              </a>
+            </li>
+
+
+
+
+
+
+
+
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+  <div class="content_display">
+    <div class="content">
+
+      <!-- Tab content -->
+      <div class="tab-content" id="v-tabs-tabContent">
+        <div class="tab-pane fade show active" id="v-tabs-home" role="tabpanel" aria-labelledby="v-tabs-home-tab"
+
+        style="position: absolute;bottom:50% ; font-family: Georgia, 'Times New Roman', Times, serif;"
+
+         >
+         <div class="watermark" style="pointer-events: none;font-size: 50px;color: rgb(162, 160, 160);">
+          Customize Your Home for Favourites
+         </div>
+          
+
+        </div>
+        <div class="tab-pane fade" id="v-tabs-items" role="tabpanel" aria-labelledby="v-tabs-profile-tab">
+
+          <div class="container" style="position: absolute;top: 10%;right: 5%;display: flex;
+          ">
+
+         <app-food-box-items></app-food-box-items>
+        </div>
+
+        </div>
+
+
+
+        <div class="tab-pane fade" id="v-tabs-additem" role="tabpanel" aria-labelledby="v-tabs-profile-tab">
+
+          <div class="container" style="position: absolute;top: 10%;">
+          <app-add-item></app-add-item>
+        </div>
+          
+        </div>
+        <div class="tab-pane fade" id="v-tabs-updateitem" role="tabpanel" aria-labelledby="v-tabs-messages-tab">
+
+          <div class="container" style="position: absolute;top: -3%;">
+
+          <app-update-item></app-update-item>
+        </div>
+        </div>
+
+        <div class="tab-pane fade" id="v-tabs-itemsbycategory" role="tabpanel" aria-labelledby="v-tabs-profile-tab">
+
+          <div class="box" style="background: white;position: absolute;top: 200px;width: 600px; right: 25%;height:fit-content">
+
+         <app-item-by-category></app-item-by-category>
+
+        </div>
+        </div>
+        <div class="tab-pane fade" id="v-tabs-addcategory" role="tabpanel" aria-labelledby="v-tabs-profile-tab">
+
+          <div class="box" style="background: white;position: absolute;top: 200px;width: 600px; right: 25%;height:fit-content">
+        <br>
+              <app-category-add-del></app-category-add-del>
+            
+          </div>
+
+        </div>
+        <div class="tab-pane fade" id="v-tabs-specials" role="tabpanel" aria-labelledby="v-tabs-profile-tab">
+
+          <div class="box" style="background: white;position: absolute;top: 200px;width: 600px; right: 25%;height:fit-content">
+        <br>
+              <app-foodbox-specials> </app-foodbox-specials>
+            
+          </div>
+
+        </div>
+      </div>
+      <!-- Tab content -->
+
+
+
+    </div>
+  </div>
+
+
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirm</h5>
+        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">Are You Sure You Want to Log Out ?</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-mdb-dismiss="modal" (click)="logout()">Log Out</button>
+      </div>
+    </div>
+  </div>

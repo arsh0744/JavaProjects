@@ -1,0 +1,107 @@
+
+.form-control::placeholder{
+    color: transparent;
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label
+
+
+{
+    transform: translateY(-1.2em) scale(0.7);
+}
+
+#intro-example{
+
+
+    padding: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 30px;
+}
+body{
+
+    padding : 1%
+}
+.card{
+    padding: 1%;
+    transition-duration: 1s;
+    transform: scale(1);
+
+}
+
+.card:hover{
+    transition-duration: 1s ;
+    transform: scale(1.03);
+}
+.card-img-top{
+
+    border-radius:15px ;
+}
+
+
+
+.btn.btn-success.btn-rounded.usable{
+
+    
+    transition-duration: 1s;
+    display: block;
+    
+
+
+}
+.btn.btn-success.btn-rounded{
+
+display: none;
+    transition-duration: 1s;
+
+
+}
+
+
+.btn.btn-danger.btn-rounded{
+    
+    display: none;
+}
+
+.btn.btn-danger.btn-rounded.usable{
+    transition-duration: 10s;
+    display: block;
+    
+}
+#exploreBtn:hover{
+
+    transition: 2s;
+    transform: scale(1.1);
+   
+
+}
+#exploreBtn{
+
+    transition: 2s;
+    transform: scale(1);
+   
+
+}
+
+
+
+
+.discount{
+
+    font-family: monospace;
+    background: rgb(14, 254, 74);
+    border-radius: 0px  15px 15px 0px;
+    width: 200px;
+    height: 30px;
+    position: relative;
+    transform-origin: 0,0;
+    transform: translateY(-280px) translateX(-10px);
+    color: white;
+
+}
+
+
+
+
+

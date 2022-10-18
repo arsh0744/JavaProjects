@@ -1,0 +1,126 @@
+<div class="box" style="margin-top:10% ;margin-right: 25%;margin-left: 25%;"  >
+
+<form  [formGroup]="updateItemForm"  (ngSubmit)="updateItem()">
+    <div class="text-center mb-3">
+      <p>Item Details:</p>
+      
+      
+    </div>
+
+<!-- Id input -->    
+    <div class="form-outline mb-4">
+        <input type="number" id="id" formControlName="id" class="form-control" placeholder="ab"/>
+        <label class="form-label" for="id">Enter ID to Update</label>
+      </div>
+
+      <div class="showform">
+    <!-- Name input -->
+    <div class="form-outline mb-4">
+      <input type="text" id="Name" formControlName="name" class="form-control"  placeholder="ab" />
+      <label class="form-label" for="Name">Name</label>
+    </div>
+
+    <!-- Category input -->
+    <div class="form-outline mb-4"  >
+      <mat-form-field appearance="fill" id="category_in" >
+        <mat-label class="form-label" for="category" >Category</mat-label>
+        <mat-select   id="category"  formControlName="category" class="form-control" >
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let cat_list of categs" value="{{cat_list.categName}}">{{cat_list.categName}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Description input -->
+    <div class="form-outline mb-4">
+      <input type="text" id="desc" formControlName="desc" class="form-control"  placeholder="ab" />
+      <label class="form-label" for="desc">Description</label>
+    </div>
+
+    <!-- Price input -->
+    <div class="form-outline mb-4">
+      <input type="number" id="price"  formControlName="price" class="form-control"placeholder="ab" />
+      <label class="form-label" for="price">Price</label>
+    </div>
+
+    <!-- Image input -->
+    <div class="form-outline mb-4">
+      <input type="text" id="img" formControlName="img" class="form-control"
+      
+      readonly
+      style="pointer-events: none;"
+      placeholder="ab" />
+      <label class="form-label" for="img">Image</label>
+    </div>
+
+
+
+            <!-- Image input -->
+            <div class="form-outline mb-4">
+              <input type="file" id="imageFile"  (change)="onFileSelected($event)"
+            
+              [disabled]="fileSelected===false"
+              
+              placeholder="ab" name="file"/>
+             
+            </div>
+
+
+
+
+
+
+  </div>
+
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-3 btn-rounded" [disabled]="updateItemForm.invalid" id="submit"
+    style="display: none; width: 60%;margin-left: 20%;">Update Item</button>
+  
+
+    
+  </form>
+
+
+
+  <button  class="btn btn-secondary btn-block mb-3 btn-rounded" (click)="getPro()" id="getpro"
+  style="width: 60%;margin-left:20% ;"
+  >Get Product</button>
+  <button type="submit" class="btn btn-close btn-block mb-3"  id="cancel" (click)="reset()" 
+  style="display: none;"><br>Cancel
+  Update</button>
+
+<!--            Load Animation                   ----------------------------------------------------------------------------------------------------->
+    <div class="loadstyle">
+    <div class="spinner-border spinner-border-sm" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-grow spinner-grow-sm" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+
+
+<!--            Load Animation                   ----------------------------------------------------------------------------------------------------->
+
+
+</div>
+
+
+<div class="container">
+  <div class="content">
+
+
+
+<p *ngIf='updateNot==true'>Item Updated , Please Wait...</p><br>
+<p *ngIf='updateNot==false'>Item Not Updated or Does Not Exist</p>
+<p *ngIf='updateNot==null'>Item Does Not Exist</p>
+
+s
+
+  </div>
+
+
+  <div class="toggleBtn"></div>
+</div>

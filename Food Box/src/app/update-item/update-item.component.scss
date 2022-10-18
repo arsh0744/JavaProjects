@@ -1,0 +1,151 @@
+.container{
+    float: right;
+    margin-top: 30px;
+    margin-right: 80px;
+    position: relative;
+    width: 0px;
+    height: 0px;
+    background: #37444b;
+    border-radius: 25px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container.active {
+    width: 400px;
+    height: 40px;
+    transition-duration: 0.5s;
+   transform: translateX(-300px);
+   transform: translateY(60px);
+  
+}
+
+
+
+
+
+.container .content {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+opacity: 0;
+    width: 400px;
+    padding: 10px;
+  transition-delay: 0.5s;
+  transform: scale(0);
+    
+
+}
+.container.active .content{
+    opacity: 1;
+    color: aliceblue;
+    transition-delay: 00.5s;
+    transform: scale(1);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 15px;
+}
+
+
+.container.active.updated .container {
+    opacity: 1;
+    transition-delay : 0.5s;
+    transform: scale(1);
+    background: #0bcf9c;
+}
+.container.container.active::before{
+    opacity: 1;
+    transition-delay : 0.5s;
+}
+
+
+.toggleBtn{
+    position: absolute;
+    min-width: 20px ;
+    height: 20px;
+     background:   #0bcf9c;
+     cursor: pointer;
+     border-radius: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     top: -30px;
+
+     opacity: 0;
+     transition-duration: 0.5s;
+     
+
+}
+.toggleBtn::before{
+  
+
+    content: 'X';
+    font-size: 0.8em;
+    color: aliceblue;
+}
+
+.container.active .toggleBtn{
+    top: -20px;
+   opacity: 1;
+    
+    transform: translateX(190px);
+     background: red;
+     transition-delay: 0.5s;
+}
+
+.loadstyle{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 50%;
+    margin-right: 25%;
+    opacity: 0;
+    transition: 0.5s;
+}
+.loadstyle.active{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+
+
+.form-control:disabled{
+    
+    border: solid 1px;
+    border-color: grey;
+    background-color: #c1c1c1;
+    cursor: default; 
+    
+
+}
+
+#imageFile:disabled{
+    border: solid 1px;
+    border-color: grey;
+    background-color: #c1c1c1;
+    cursor: default; 
+    
+
+}
+
+
+
+
+
+
+
+.form-control::placeholder{
+    color: transparent;
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label
+
+
+{
+    transform: translateY(-1.2em) scale(0.7);
+}

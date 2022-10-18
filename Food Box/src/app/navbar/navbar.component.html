@@ -1,0 +1,151 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 15px;">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="#" id="logo">
+          <img
+            src="\assets\images\Food Box-logos.jpeg"
+            height="20"
+            alt="MDB Logo"
+            loading="lazy"
+            style="scale: 4;border-radius: 10px;"
+          />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" style="margin-left: 20px;">
+            <a class="nav-link active" routerLink="home" routerLinkActive >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="menu">Menu</a>
+          </li>
+        </ul>
+
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+
+        <!-- Icon -->
+
+
+        <a class="text-reset me-3" id="contact" href="" >
+
+          <i class="fas fa-map-location-dot"></i>  Locate A Store Near You |
+        </a>
+        <a class="text-reset me-3" id="contact" href="mailto:admin@foodbox.com"  s >
+
+          <i class="fas fa-envelope"></i>  Mail Us |
+        </a>
+        <a class="text-reset me-3" href="tel:999999" id="contact"  style="padding-right:70px;" >
+          <i class="fas fa-phone"></i>  Call Us |
+        </a  >
+        <a class="text-reset me-3" routerLink="cart" id="cartIcon">
+          <i class="fas fa-shopping-cart" style="padding-right:10px ;"></i>
+          <span class="badge rounded-pill badge-notification bg-danger" *ngIf="cartSize!=0">{{cartSize}}</span>
+        </a>
+
+        <!-- Notifications -->
+        <div class="dropdown">
+          <a
+            class="text-reset me-3 dropdown-toggle hidden-arrow"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-bell"></i>
+            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+          </a>
+
+        </div>
+        <!-- Avatar -->
+        <div    *ngIf="haiUser==false" id="loginBtn">
+          <a class="btn text-white" style="background-color: #a45a06;" role="button" routerLink="login_signup">
+            <i class="fa fa-user" aria-hidden="true" style="margin-right: 5px;"></i>
+            Login/Signup
+          </a>
+        <!--src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" -->
+        </div>
+        <div role="button"  *ngIf="haiUser==true"  data-mdb-toggle="modal" data-mdb-target="#LogoutModal"   >
+        <li  >
+          <a >
+          <img
+            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+            class="rounded-circle"
+            height="25"
+            alt="Black and White Portrait of a Man"
+            loading="lazy"
+
+          />
+          Log Out
+        </a>
+      </li>
+    </div>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+
+
+  <!-- Modal -->
+ <div class="modal fade" id="LogoutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="discountModalLabel">Logout </h5>
+        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are You Sure You Want To Logout ?
+        <div class="modal-footer">
+
+
+          <div class="loadst" id="loadst">
+            <div class="spinner-border spinner-border-sm" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+
+          </div>
+
+
+
+          <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary"data-mdb-dismiss="modal"
+
+          (click)="logoutUser()"
+          >Logout</button>
+        </div>
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+

@@ -1,0 +1,68 @@
+<form [formGroup]="categ_form" (ngSubmit)="categ_add()" style="margin-bottom: 150px ;">
+    <!-- Categpry input -->
+    <div class="form-outline mb-4">
+      <input type="text" id="categ" class="form-control" placeholder="av" formControlName="categ" />
+      <label class="form-label" for="categ">Category</label>
+    </div>
+
+
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="categ_form.invalid">Add
+      Category</button>
+  </form>
+
+
+                  <div class="loadstyle" style="position:absolute ;left:90% ;bottom: 87.2%;display: none;" id="addCategLoadStyle">
+                    <div class="spinner-border spinner-border-sm" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                    
+                  </div>
+
+
+  <div class="col-md-4" style="position: absolute;bottom: 46%; left: 38%; " id="addResponse">
+    <div class="alert alert-success">
+      <p>Category Added</p>
+    </div>
+    </div>
+<form [formGroup]="delCateg_form"  (ngSubmit)="delCategory()">
+<h4>Select Category to Delete</h4>
+<div class="row"  style="display: flex;">
+    <div class="col-md-4">
+<mat-form-field appearance="fill">
+    <mat-select   id="category"  formControlName="delcategory" class="form-control" placeholder="ab">
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let cat_list of categs" value="{{cat_list.categName}}">{{cat_list.categName}}</mat-option>
+    </mat-select>
+    <mat-label class="form-label" for="category" >Category</mat-label>
+
+  </mat-form-field>
+
+
+
+
+</div>
+<div class="col-md-4" style="margin-top:15px ;">
+<button class="btn btn-danger">Delete Category</button>
+</div>
+<div class="col-md-4" style="margin-right: -20%;" id="delResponse">
+<div class="alert alert-success">
+  <p>Category Deleted</p>
+</div>
+</div>
+
+
+          <div class="loadstyle" style="position:absolute ;left:60% ;bottom: 11%;display: none;" id="delCategLoadStyle">
+          <div class="spinner-border spinner-border-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+
+  
+</div>
+
+</div>
+</form>
+
+              
+

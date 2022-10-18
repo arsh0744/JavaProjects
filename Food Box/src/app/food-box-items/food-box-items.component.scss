@@ -1,0 +1,58 @@
+#sortlist{
+
+
+    margin-left: 66%;
+    margin-top: 1%;
+    
+    width: 200px;
+    
+    
+    }
+    
+     mat-option.mat-selected{
+    
+        border:green 1px solid;
+       
+     }
+
+   .container{
+      width: 100%;
+      display: inline-table;
+      justify-items:center; /* to horizontally center the content within all children */
+      align-items:center;
+      
+   }
+   .form-control::placeholder{
+      color: transparent;
+  }
+  
+  .form-control:focus + .form-label,
+  .form-control:not(:placeholder-shown) + .form-label
+  
+  
+  {
+      transform: translateY(-1.2em) scale(0.7);
+  }
+
+  #card{
+
+
+   border-radius: 30px;
+
+
+  }
+  #card:hover{
+
+   transform: scale(1.02);
+   transition-duration: 2s;
+
+  }
+  .card-img-top{
+
+   border-radius: 0px;
+  }
+
+mat-select{
+
+   transform: translateX(180px);
+}
