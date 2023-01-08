@@ -1,0 +1,70 @@
+
+<div class="box" *ngIf="QuizStart==false && quizEnd==false ">
+    <div class="row"  >
+      <form [formGroup]="userNameForm" >
+        <div class="form-group">
+            <mat-form-field id="quizName">
+        <input matInput placeholder="Enter Your Name" formControlName="userName" class="form-control">
+      </mat-form-field>
+    </div>
+
+    </form>
+
+      <button mat-fab extended color="primary" (click)="startQuiz(true)" id="createQuizBtn">
+        <mat-icon>assignment_ind</mat-icon>
+        Start Quiz
+      </button>
+</div>
+</div>
+<div class="wrapper" *ngIf="QuizStart==true && quizEnd==false">
+
+
+
+    <div class="ques">
+
+    </div>
+        <form [formGroup]="questionForm">
+
+          <span>
+            <h2>{{activeQuestion.ques}}</h2>
+          </span>
+
+          <div >
+            <label>Options :</label>
+            <mat-radio-group formControlName="opt" class="form-control" >
+              <mat-radio-button value=1 >
+                    {{activeQuestion.opt_1}}
+            </mat-radio-button>
+            <mat-radio-button value=2 >
+                {{activeQuestion.opt_2}}
+        </mat-radio-button>
+        <mat-radio-button value=3 >
+            {{activeQuestion.opt_3}}
+    </mat-radio-button>
+    <mat-radio-button value=4>
+        {{activeQuestion.opt_4}}
+</mat-radio-button>
+
+            </mat-radio-group>
+          </div>
+        </form>
+        <button mat-fab extended color="primary"  id="next" (click)="nextQues()">
+            <mat-icon>assignment_turned_in</mat-icon>
+            Submit And Next
+          </button>
+
+</div>
+
+<div class="wrapper" *ngIf="quizEnd==true">
+
+<span>
+    <h1>Quiz Finished</h1>
+    <h2>
+        Your Score :{{score}}
+    </h2>
+</span>
+<div id="barChart">
+
+</div>
+
+</div>

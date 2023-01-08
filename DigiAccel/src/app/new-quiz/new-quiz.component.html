@@ -1,0 +1,79 @@
+
+
+<body>
+
+<div class="box" *ngIf="createQuizStart==false">
+    <div class="row"  >
+      <form [formGroup]="newQuizNameForm" >
+        <div class="form-group">
+            <mat-form-field id="quizName">
+        <input matInput placeholder="Enter Quiz Name" formControlName="quizName" class="form-control">
+      </mat-form-field>
+    </div>
+
+    </form>
+
+      <button mat-fab extended color="primary" (click)="createQuiz()" id="createQuizBtn">
+        <mat-icon>assignment_ind</mat-icon>
+        Create Quiz
+      </button>
+</div>
+</div>
+<div class="question">
+    <div class="column" *ngIf="createQuizStart==true">
+        <form   [formGroup]="newQuizForm"  >
+                <div class="row">
+                <mat-form-field class="ques">
+                    <input matInput placeholder="Enter Question " formControlName="ques" class="form-control" >
+                </mat-form-field>
+                <mat-form-field appearance="fill" id="difficultyOption">
+                    <mat-label>Select Difficulty</mat-label>
+                    <mat-select formControlName="diff" class="form-control">
+                      <mat-option *ngFor="let difficulty of difficulties" [value]="difficulty" >
+                        {{difficulty}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+                <mat-form-field >
+                    <input matInput placeholder="Enter Option 1 " formControlName="opt1" class="form-control" >
+                </mat-form-field>
+                <mat-form-field >
+                    <input matInput placeholder="Enter Option 2 " formControlName="opt2" class="form-control" >
+                </mat-form-field>
+                <mat-form-field >
+                    <input matInput placeholder="Enter Option 3 " formControlName="opt3" class="form-control" >
+                </mat-form-field>
+                <mat-form-field >
+                    <input matInput placeholder="Enter Option 4 " formControlName="opt4" class="form-control" >
+                </mat-form-field>
+                <mat-form-field >
+                    <input type="number" matInput placeholder="Correct Option Number "
+                     formControlName="correctOpt" class="form-control" id="correctopt">
+                </mat-form-field>
+
+
+
+
+
+</form>
+<button mat-fab extended color="primary"  (click)="nextQues()" id="addBtn" >
+    <mat-icon>assignment_ind</mat-icon>
+    Add Question
+  </button>
+</div>
+<div style="align-items: center;align-content: center;text-align: center; " >
+    <span id="successAddQues" style="display: none;">
+        Question Added
+    </span>
+    <span id="successAddQuiz" style="display: none;">
+        <h1>
+       Quiz Created , Redirecting......................
+    </h1>
+    </span>
+</div>
+</div>
+
+
+</body>

@@ -1,0 +1,12 @@
+.card-wrapper{
+    border: solid 1px grey;
+    width: 200px;
+    height: 100px;
+    margin: 2%;
+    border-radius: 20px;
+}
+mat-card-actions{
+    align-items: center;
+    justify-items: center;
+    display: flex;
+}

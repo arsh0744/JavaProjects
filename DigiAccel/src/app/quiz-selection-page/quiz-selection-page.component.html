@@ -1,0 +1,16 @@
+<div class="card-wrapper" *ngFor="let quiz of quizList">
+
+    <mat-card class="example-card">
+      <mat-card-header>
+
+        <mat-card-title>{{quiz.Tables_in_digiaccel}}</mat-card-title>
+
+      </mat-card-header>
+
+
+
+    </mat-card>
+    <mat-card-actions>
+        <button mat-raised-button color="accent"  routerLink="quizPage" (click)="takeQuiz(quiz.Tables_in_digiaccel)">Take Quiz</button>
+              </mat-card-actions>
+  </div>

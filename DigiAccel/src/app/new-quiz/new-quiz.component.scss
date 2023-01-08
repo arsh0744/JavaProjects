@@ -1,0 +1,76 @@
+
+
+
+body{
+    margin-top:-12% ;
+    background: burlywood;
+}
+.box{
+
+
+    margin-top: 11%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    max-width: 100% ;
+    }
+
+    button{
+
+
+        transform: scale(0.7);
+        background:greenyellow;
+
+    }
+    button:hover{
+
+
+        background: green;
+
+    }
+    mat-form-field {
+
+        width: fit-content;
+        margin: 1%;
+
+    }
+    .ques{
+        margin-top: 20%;
+        width: fit-content;
+    }
+
+    #quizName{
+        margin-top: 25%;
+
+    }
+    .row{
+        max-width: 90%;
+
+    }
+    .question{
+
+        margin-left: 25%;
+        margin-top: 5%;
+
+    }
+
+    #difficultyOption{
+        margin-left: 3%;
+        padding: 10px;
+        transform: translateY(8px) translateX(-20px);
+
+    }
+    #addBtn{
+
+        margin-left: 20%;
+    }
+    #correctopt{
+        width: 600px;
+    }
+
+    #createQuizBtn{
+        transform: translateX(250px) translateY(-75px);
+    }
